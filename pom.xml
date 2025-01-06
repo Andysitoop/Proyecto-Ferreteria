@@ -20,10 +20,16 @@
         <sqlite.version>3.36.0</sqlite.version> <!-- Cambiar a la versión disponible -->
     </properties>
 
+    <!-- Repositorios -->
     <repositories>
         <repository>
             <id>openjfx-repo</id>
             <url>https://openjfx.io/maven</url>
+        </repository>
+        <!-- Repositorio para Maven Central -->
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
         </repository>
     </repositories>
 
@@ -46,6 +52,13 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>${sqlite.version}</version>
         </dependency>
+
+        <!-- Dependencia para JFoenix -->
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>9.0.10</version> <!-- Usa la versión más reciente disponible -->
+        </dependency>
     </dependencies>
 
     <build>
@@ -63,7 +76,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.miempresa.ferreteria.Ferreteria</mainClass>
+                    <mainClass>com.miempresa.vistas.LoginApp</mainClass> <!-- Apunta a tu clase principal -->
                 </configuration>
             </plugin>
         </plugins>

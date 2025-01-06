@@ -1,16 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.miempresa.ferreteria;
 
-/**
- *
- * @author terra
- */
+import com.miempresa.vistas.LoginApp;
+import javafx.application.Application;
+
 public class Ferreteria {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // Llamar al launch de LoginApp para iniciar la aplicación JavaFX
+        Application.launch(LoginApp.class, args);
     }
 }
+
