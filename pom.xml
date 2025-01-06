@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -15,7 +16,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <javafx.version>17.0.2</javafx.version> <!-- Asegúrate de que esta versión es compatible -->
+        <javafx.version>20</javafx.version>
+        <sqlite.version>3.36.0</sqlite.version> <!-- Cambiar a la versión disponible -->
     </properties>
 
     <repositories>
@@ -26,7 +28,7 @@
     </repositories>
 
     <dependencies>
-        <!-- Dependencias de JavaFX -->
+        <!-- Dependencia para JavaFX -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -37,10 +39,18 @@
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
         </dependency>
+
+        <!-- Dependencia para SQLite -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>${sqlite.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Plugin para compilar y ejecutar JavaFX -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -53,7 +63,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.miempresa.MainApp</mainClass> <!-- Sustituye con tu clase principal -->
+                    <mainClass>com.miempresa.ferreteria.Ferreteria</mainClass>
                 </configuration>
             </plugin>
         </plugins>
